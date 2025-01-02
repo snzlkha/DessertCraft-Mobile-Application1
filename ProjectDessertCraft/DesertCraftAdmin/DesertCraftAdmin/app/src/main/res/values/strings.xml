@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">DessertCraft Admin</string>
+    <string name="create_category">Please create a dessert category before adding the dessert if one has not already been created!</string>
+</resources>

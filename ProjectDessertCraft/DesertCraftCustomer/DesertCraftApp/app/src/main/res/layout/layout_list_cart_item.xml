@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="4dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="4dp"
+    app:cardCornerRadius="12dp"
+    tools:ignore="HardcodedText">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:button="@drawable/bg_select_radio_item" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:padding="1dp"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/coco"
+            app:strokeWidth="1dp">
+
+            <ImageView
+                android:id="@+id/img_placeholder"
+                android:layout_width="115dp"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:contentDescription="placeholder"
+                android:maxHeight="112dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_placeholder" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="8dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="8dp">
+
+            <RelativeLayout
+                android:id="@+id/layout_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/img_delete"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:contentDescription="delete"
+                    android:padding="2dp"
+                    android:src="@drawable/bin"
+                    app:tint="@color/coco" />
+
+                <ImageView
+                    android:id="@+id/img_edit"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_toStartOf="@+id/img_delete"
+                    android:contentDescription="edit"
+                    android:padding="2dp"
+                    android:src="@drawable/editing"
+                    app:tint="@color/coco" />
+
+                <TextView
+                    android:id="@+id/tv_desert_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginEnd="8dp"
+                    android:layout_toStartOf="@+id/img_edit"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/app_name"
+                    android:textColor="@color/coco"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_customizations"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_desert_name"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@+id/img_edit"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@color/coco"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_customizations"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_toStartOf="@+id/img_edit"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Price: 0"
+                    android:textColor="@color/coco" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_qty_update"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_details">
+
+                <TextView
+                    android:id="@+id/tv_qty_minus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="center"
+                    android:paddingHorizontal="12dp"
+                    android:text="-"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_qty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_qty"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="center"
+                    android:paddingHorizontal="14dp"
+                    android:paddingVertical="2dp"
+                    android:textSize="16sp"
+                    tools:text="1" />
+
+                <TextView
+                    android:id="@+id/tv_qty_plus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="center"
+                    android:paddingHorizontal="12dp"
+                    android:text="+"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,18 @@
+{
+  "success": true,
+  "message": "DATA RECEIVED!",
+  "data": [
+    {
+      "variation": "Variation 1",
+      "option": "Option 1, Option 2, Option 3"
+    },
+    {
+      "variation": "Variation 2",
+      "option": "Option 4, Option 5, Option 6"
+    },
+    {
+      "variation": "Variation 3",
+      "option": "Option 7, Option 8, Option 9"
+    }
+  ]
+}

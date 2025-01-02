@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="customRatingBar" parent="android:style/Widget.Material.RatingBar.Small" />
+
+    <style name="FadeInDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+    </style>
+
+    <style name="ItemActive">
+        <item name="android:textSize">13sp</item>
+    </style>
+</resources>
+
+

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RatingBar
+        android:id="@+id/normalRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:progressTint="#FFCC01"
+        android:rating="3" />
+
+    <RatingBar
+        android:id="@+id/smallRating"
+        style="?android:attr/ratingBarStyleIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:progressTint="#FFCC01"
+        android:rating="3" />
+
+    <RatingBar
+        android:id="@+id/smallerRating"
+        style="@android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="-63dp"
+        android:isIndicator="true"
+        android:max="5"
+        android:numStars="5"
+        android:scaleX=".7"
+        android:scaleY=".7"
+        android:transformPivotX="200dp"
+        android:transformPivotY="14dp" />
+
+    <RatingBar
+        android:id="@+id/moreSmallerRating"
+        style="@android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="-112dp"
+        android:isIndicator="true"
+        android:max="5"
+        android:numStars="5"
+        android:scaleX=".45"
+        android:scaleY=".45"
+        android:transformPivotX="200dp"
+        android:transformPivotY="14dp" />
+
+    <RatingBar
+        android:id="@+id/smallestRating"
+        style="@style/customRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:isIndicator="true"
+        android:max="5"
+        android:numStars="5"
+        android:progressTint="#FFCC01" />
+
+</LinearLayout>

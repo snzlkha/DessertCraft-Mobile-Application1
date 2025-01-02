@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="3dp"
+    app:cardCornerRadius="0dp"
+    tools:ignore="HardcodedText">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_delete_variation"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:contentDescription="delete"
+                android:src="@drawable/bin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/coco" />
+
+            <ImageView
+                android:id="@+id/img_edit_variation"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginEnd="12dp"
+                android:contentDescription="edit"
+                android:src="@drawable/editing"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/img_delete_variation"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/coco" />
+
+            <EditText
+                android:id="@+id/edittext_variation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/transparent"
+                android:hint="Variation"
+                android:imeOptions="actionNext"
+                android:inputType="textCapWords"
+                android:paddingVertical="8dp"
+                android:textColor="@color/coco"
+                android:textColorHint="@color/coco_hint"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/img_edit_variation"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Container for options -->
+        <LinearLayout
+            android:id="@+id/option_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

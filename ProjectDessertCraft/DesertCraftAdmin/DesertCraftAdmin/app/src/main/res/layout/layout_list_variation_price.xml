@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="8dp"
+    tools:ignore="HardcodedText">
+
+    <TextView
+        android:id="@+id/tvCombination"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/coco"
+        android:textSize="18sp"
+        tools:text="Color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-3dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="3dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Price"
+                android:textColor="@color/coco"
+                android:textSize="13sp" />
+
+            <EditText
+                android:id="@+id/et_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edittext"
+                android:fontFamily="@font/poppins_medium"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:paddingHorizontal="12dp"
+                android:paddingTop="7dp"
+                android:paddingBottom="5dp"
+                android:textColor="@color/coco"
+                android:hint="RM"
+                android:textColorHint="@color/coco_hint"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="3dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Offer Price"
+                android:textColor="@color/coco"
+                android:textSize="13sp" />
+
+            <EditText
+                android:id="@+id/et_offer_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edittext"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:hint="RM"
+                android:inputType="number"
+                android:paddingHorizontal="12dp"
+                android:paddingTop="7dp"
+                android:paddingBottom="5dp"
+                android:textColor="@color/coco"
+                android:textColorHint="@color/coco_hint"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="3dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Stock"
+                android:textColor="@color/coco"
+                android:textSize="13sp" />
+
+            <EditText
+                android:id="@+id/et_stock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edittext"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="end"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:paddingHorizontal="12dp"
+                android:paddingTop="7dp"
+                android:paddingBottom="5dp"
+                android:textColor="@color/coco"
+                android:textColorHint="@color/coco_hint"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    tools:context=".fragments.PreviewFragment"
+    tools:ignore="HardcodedText">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/peach"
+        app:contentInsetEnd="8dp"
+        app:contentInsetStart="8dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="back"
+                android:src="@drawable/ic_arrow_back"
+                app:tint="@color/coco" />
+
+            <TextView
+                android:id="@+id/tv_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"
+                android:layout_toEndOf="@+id/btn_back"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="bottom"
+                android:paddingTop="3dp"
+                android:text="Order Confirmation"
+                android:textColor="@color/coco"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_submit_order"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingVertical="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="4dp"
+                    android:layout_marginStart="24dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Pickup At"
+                    android:textColor="@color/coco"
+                    android:textSize="18sp" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="0dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="24dp"
+                        android:paddingVertical="12dp">
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_qty"
+                            android:padding="1dp">
+
+                            <ImageView
+                                android:id="@+id/img_shop"
+                                android:layout_width="150dp"
+                                android:layout_height="130dp"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/img_placeholder" />
+
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_shop_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:textColor="@color/coco"
+                                android:textSize="17sp" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/img_pin"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginStart="2dp"
+                                    android:src="@drawable/pin" />
+
+                                <TextView
+                                    android:id="@+id/tv_shop_location"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="top"
+                                    android:textColor="@color/coco"
+                                    android:textSize="16sp" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="16dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/clock"
+                        app:tint="@color/coco" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="4dp"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:paddingTop="3dp"
+                        android:text="Pickup at Outlet:"
+                        android:textColor="@color/coco"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_pickup_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:paddingTop="3dp"
+                        android:textColor="@color/coco"
+                        android:textSize="17sp"
+                        tools:text="12/5/2024" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="4dp"
+                    android:layout_marginStart="24dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Your Order"
+                    android:textColor="@color/coco"
+                    android:textSize="18sp" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="0dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingVertical="12dp">
+
+                        <TextView
+                            android:id="@+id/tv_product_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="-3dp"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColor="@color/coco"
+                            android:textSize="16sp"
+                            tools:text="Product ID: 01" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:orientation="horizontal"
+                            android:paddingHorizontal="24dp">
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_qty"
+                                android:padding="1dp">
+
+                                <ImageView
+                                    android:id="@+id/img_desert"
+                                    android:layout_width="150dp"
+                                    android:layout_height="130dp"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/img_placeholder" />
+
+                            </FrameLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:id="@+id/layout_details"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <ImageView
+                                        android:id="@+id/img_delete"
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:layout_alignParentEnd="true"
+                                        android:contentDescription="delete"
+                                        android:padding="2dp"
+                                        android:src="@drawable/bin"
+                                        app:tint="@color/coco" />
+
+                                    <ImageView
+                                        android:id="@+id/img_edit"
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:layout_marginEnd="6dp"
+                                        android:layout_toStartOf="@+id/img_delete"
+                                        android:contentDescription="edit"
+                                        android:padding="2dp"
+                                        android:src="@drawable/editing"
+                                        app:tint="@color/coco" />
+
+                                    <TextView
+                                        android:id="@+id/tv_desert_name"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_marginEnd="8dp"
+                                        android:layout_toStartOf="@+id/img_edit"
+                                        android:fontFamily="@font/poppins_semibold"
+                                        android:textColor="@color/coco"
+                                        android:textSize="17sp"
+                                        tools:text="@string/app_name" />
+
+                                    <RelativeLayout
+                                        android:id="@+id/layout_price"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/tv_desert_name"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_marginTop="12dp"
+                                        android:layout_toStartOf="@+id/img_delete">
+
+                                        <TextView
+                                            android:id="@+id/tv_price"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/poppins_semibold"
+                                            android:textColor="@color/coco"
+                                            tools:text="Price: 0" />
+
+                                        <TextView
+                                            android:id="@+id/tv_discounted_price"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_toEndOf="@+id/tv_price"
+                                            android:fontFamily="@font/poppins_semibold"
+                                            android:textColor="@color/coco"
+                                            android:layout_marginStart="16dp"
+                                            android:visibility="visible"
+                                            tools:text="0" />
+                                    </RelativeLayout>
+
+                                    <TextView
+                                        android:id="@+id/tv_customizations"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/layout_price"
+                                        android:layout_alignParentStart="true"
+                                        android:fontFamily="@font/poppins_semibold"
+                                        android:textColor="@color/coco" />
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/tv_choose_design"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/bg_date"
+                    android:ellipsize="marquee"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:paddingHorizontal="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="8dp"
+                    android:text="Upload Your Design"
+                    android:textColor="@color/coco"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="4dp"
+                    android:layout_marginStart="24dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Special Remarks"
+                    android:textColor="@color/coco"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/et_instruction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@drawable/bg_text_area"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center"
+                    android:hint="Write any special instruction"
+                    android:minHeight="120dp"
+                    android:padding="12dp" />
+
+                <CheckBox
+                    android:id="@+id/cb_note"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="14dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="24dp"
+                    android:button="@drawable/checkbox_selector"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="top"
+                    android:paddingStart="4dp"
+                    android:paddingTop="2dp"
+                    android:paddingEnd="0dp"
+                    android:text="@string/accept_order"
+                    android:textColor="@color/coco"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <Button
+        android:id="@+id/btn_submit_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginVertical="12dp"
+        android:background="@drawable/bg_button"
+        android:backgroundTint="@color/coco"
+        android:gravity="center"
+        android:text="Submit Order"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

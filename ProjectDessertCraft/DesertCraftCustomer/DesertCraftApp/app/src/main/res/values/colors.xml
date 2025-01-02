@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="primary">#8C6A4F</color>
+    <color name="primary_dark">#816046</color>
+    <color name="app_background">#F4F4F4</color>
+    <color name="green">#2D632F</color>
+    <color name="yellow">#FFFF00</color>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="red">#FF0000</color>
+    <color name="lime">#00FF00</color>
+    <color name="dark_green">#006400</color>
+    <color name="light_gray">#D3D3D3</color>
+    <color name="darker_gray">#DFDFDF</color>
+    <color name="peach">#F2E2D5</color>
+    <color name="coco">#8C6A4F</color>
+    <color name="coco_dark">#816046</color>
+    <color name="text_color">#555555</color>
+
+    <color name="color0">#0B0B0B</color>
+    <color name="color1">#FF5733</color>   <!-- Vivid Tangelo -->
+    <color name="color2">#FFC300</color>   <!-- Vivid Gamboge -->
+    <color name="color3">#FFC0CB</color>   <!-- Pink -->
+    <color name="color4">#DAF7A6</color>   <!-- Pastel Green -->
+    <color name="color5">#00C9A7</color>   <!-- Caribbean Green -->
+    <color name="color6">#00BFFF</color>   <!-- Capri -->
+    <color name="color7">#1E90FF</color>   <!-- Dodger Blue -->
+    <color name="color8">#F7CAC9</color>   <!-- Champagne Pink -->
+    <color name="color9">#E74C3C</color>   <!-- Alizarin Crimson -->
+    <color name="color10">#8E44AD</color>  <!-- Wisteria -->
+    <color name="color11">#FF1493</color>  <!-- Deep Pink -->
+    <color name="color12">#2ECC71</color>  <!-- Persian Green -->
+    <color name="color13">#3498DB</color>  <!-- Curious Blue -->
+    <color name="color14">#FF7F50</color>  <!-- Coral -->
+    <color name="color15">#ADFF2F</color>  <!-- Green Yellow -->
+    <color name="color16">#7FFFD4</color>  <!-- Aquamarine -->
+    <color name="color17">#9370DB</color>  <!-- Medium Purple -->
+    <color name="color18">#FF4500</color>  <!-- Orange Red -->
+    <color name="color19">#00FA9A</color>  <!-- Medium Spring Green -->
+    <color name="color20">#483D8B</color>  <!-- Dark Slate Blue -->
+
+</resources>
